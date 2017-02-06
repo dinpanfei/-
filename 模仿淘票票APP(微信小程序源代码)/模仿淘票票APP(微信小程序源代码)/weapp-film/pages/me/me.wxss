@@ -1,0 +1,14 @@
+/* pages/me/me.wxss */
+page
+{
+    background-color:rgba(204,204,204,0.5);
+    font-family: 微软雅黑;
+    font-size: 14px;
+}
+.contens
+{
+  background: #fff;  
+  width: 100%;
+  margin-top: 20rpx;
+
+}

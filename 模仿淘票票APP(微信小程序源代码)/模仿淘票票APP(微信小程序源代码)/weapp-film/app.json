@@ -1,0 +1,41 @@
+{
+  "pages":[
+    "pages/index/index",
+    "details/details",
+    "details2/details2",
+    "pages/cinema/cinema",
+    "pages/find/find",
+    "pages/me/me",
+    "pages/login/login"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#FF4D64",
+    "navigationBarTitleText": "淘票",
+    "backgroundColor":"#FFF",
+    "navigationBarTextStyle":"white"
+  },
+   "tabBar": {
+    "color": "#686868",
+    "selectedColor": "#CC3333",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "images/movie1.png",
+      "selectedIconPath": "images/movie.png",
+      "text": "首页"
+    }, {
+      "pagePath": "pages/cinema/cinema",
+      "iconPath": "images/yingyuan2.png",
+      "selectedIconPath": "images/yingyuan.png",
+      "text": "影院"
+    },
+    {
+      "pagePath": "pages/me/me",
+      "iconPath": "images/me2.png",
+      "selectedIconPath": "images/me.png",
+      "text": "我的"
+    }]
+  }
+}

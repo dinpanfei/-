@@ -1,0 +1,118 @@
+
+     <!--顶部标题-->
+	<view class="list flex-box">
+		<view class="list-main flex-btn">
+		    <view class="list-title list-brief">
+			    <text>{{cinerma.cinemaName}}</text>
+					<!--<test> 为测试部分-->
+		    </view>
+		    <view class="list-size">
+                <text>	{{addr}}</text>
+			</view>
+			  <view class="list-size">
+                <text style="color:red;">{{tel}}</text>
+			</view>
+		</view>
+	</view>
+
+   <view wx:if="{{images.length==0}}" class="no-movies-info">
+   此影院暂无上映影片
+   </view>
+
+   <view wx:else>
+    <view class="movies-list">
+     <view class="list-title">
+        <text style="font-size:16px;font-family: 微软雅黑;">正在热映</text>
+     </view>
+     <!--图片导航-->
+     <view class="trump">
+      <!--背景图片-->
+        <image class="PicBg2" src="{{images[imageIndex].img}}" />
+      <!--图片滚动-->
+     <scroll-view class="scroll-view" scroll-x="true" scroll-left="{{scrollLeft}}" bindscroll="EventHandle" duration="3000" >
+      <view class="swiper-tab-list"  bindtap="swichNav"  wx:for="{{images}}" data-index="{{index}}">
+      <image class="{{imageIndex==index?'big-img':'normal-img'}}" src="{{item.img}}" duration="300" style="margin-left:{{index==0?left:'0'}}px;margin-right:{{index==images.length-1?left:0}}px"></image>
+      </view>
+     </scroll-view>
+     </view>
+    <view class="movie-info">
+      <!--中部三角形-->
+       <view class="triangle-up"></view>
+    <view class="movie-info movie-title">
+     <text class="movie-info movie-name">{{images[imageIndex].nm}}</text>
+     <text wx:if="{{images[imageIndex].sc==0}}" class="movie-info movie-sc not">暂无评分</text>
+     <text wx:else class="movie-info movie-sc">{{images[imageIndex].sc}}分</text>
+     </view>
+      <view class="movie-info movie-scm">
+          {{images[imageIndex].scm}}
+      </view>
+     </view>
+   </view>
+ 
+     <!--//对应的电影名称，评分-->
+
+
+<!--使用滚动条显示时间-->
+<view class="movie-show">
+<scroll-view class="scroll-view-time" scroll-x="true" scroll-left="10">
+  <block wx:for="{{images[imageIndex].shows}}" wx:key="item.showDate">
+      <view class="show-date {{dateIndex==index?'show-selected':''}}" bindtap="chooseDate" data-index="{{index}}" style="{{index==0?'margin-left:20rpx;':''}}">
+        {{item.showDate}}
+      </view>
+  </block>
+</scroll-view>
+
+
+	<!--时间表-->
+  <block wx:for="{{images[imageIndex].shows[dateIndex].plist}}" wx:key="item.showId">
+    <view class="show-info {{item.sell?'':'sell-false'}}" >
+    <navigator url="url">
+       <view class="show-tm">
+            {{item.tm}}
+       </view>
+        <view class="show-body">
+		      <view class="list-title list-brief">
+              {{item.lang}}{{item.tp}}
+		      </view>
+          <view class="list-title list-brief" style="height: 48rpx">
+              {{item.th}} 
+		      </view>
+       </view>
+	
+          <view class="show-price" wx:if="{{!item.sell}}">
+            已关闭售票
+          </view>
+          <view class="show-price" wx:else>
+            <text class="show-pr">￥{{item.pr}}</text>
+            <text class="show-sellPr">￥{{item.sellPr}}</text>
+          </view>
+          <view class="show-line">
+            选座
+          </view>
+
+	   </navigator>
+   </view>
+  </block>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</view>
+</view>
+
+
+  

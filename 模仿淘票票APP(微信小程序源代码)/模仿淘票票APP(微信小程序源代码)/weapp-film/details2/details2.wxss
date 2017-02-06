@@ -1,0 +1,282 @@
+/* details2/details2.wxss */
+
+.flex-box{
+	display: flex;
+	flex-direction: row;
+    font-family: 微软雅黑;
+}
+.flex-btn{
+	flex: 3;
+}
+.list{
+	border-bottom: 1rpx solid #e5e5e5;
+	padding: 30rpx;
+}
+.list-title{
+	height: 52rpx;
+}
+.list-title text{
+	font-size: 16px;
+	line-height: 52rpx;
+	color: #000;
+}
+.list-size{
+	font-size: 14px;
+	color: #8a869e;
+    overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 500rpx;
+    margin-top: 5rpx;
+}
+.list-size .star{
+	width: 100rpx;
+	height: 20rpx;
+	background: url(../../images/i-star.png) no-repeat;
+	background-size: 100rpx;
+	display: inline-block;
+	margin-right: 10rpx;
+}
+.no-movies-info{
+    font-size: 50rpx;
+    width: 100%;
+    height: 80vh;
+    /*margin-top: 25rpx;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    color: #ccc;
+	font-family: 微软雅黑;
+}
+.trump{
+    position:relative;
+    width:100%;
+	height: 119px;
+}
+
+.PicBg2{
+	position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:117px;
+    filter:blur(5px);
+}
+/*向上的三角形  */
+.triangle-up
+{
+width:0;
+height:0;   
+display: block;
+border-left:18rpx solid transparent;   
+border-right:18rpx solid transparent;   
+border-bottom:18rpx solid #fff;
+position: absolute;
+top:222px;
+left:365rpx;
+}
+/*图片水平滚动栏*/
+.scroll-view
+{ 
+ white-space:nowrap;
+ display: block;
+ line-height: 118px;
+ width:100%;
+ height: 118px;
+}
+/*不显示滚动条*/
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.swiper-tab-list{ 
+    display: inline-block;
+    margin: 0 8px;
+    height: 100%;
+}
+.normal-img{
+    width: 67px;
+    height: 84px;
+    opacity: 0.5;	
+    transition: all 1s;
+}
+.big-img{
+    width: 76px;
+    height: 94px;
+    opacity: 1;
+	margin-top:7px;
+	border:0.5px solid #fff;	
+	
+}
+
+
+
+/*电影标题和评分*/
+.movie-info
+{
+height:50rpx;
+margin-top: 7rpx;
+font-size: 14px;
+text-align: center;
+font-family: 微软雅黑;
+}
+.movie-sc
+{
+font-size: 13px;
+text-align: center;
+font-family: 微软雅黑;	
+color:#FF9933;
+margin-left: 8rpx;
+}
+.not{
+	color:#ccc;
+}
+.movie-scm
+{
+border-bottom: 0.5rpx solid #ccc;	
+}
+
+/*日期水平滚动栏*/
+.movie-show{
+    margin-top: 70rpx;
+    background-color: #fff;
+}
+.scroll-view-time
+{
+ border-bottom: 0.5rpx solid #ccc;  
+ white-space:nowrap;
+ display:inline-block;
+ width:100%;
+ height:60rpx;
+ line-height: 60rpx;
+}
+.show-date
+{
+ display: inline-block;
+ white-space: nowrap;
+ font-size:14px;
+ color:darkred;
+ margin: 10rpx 12rpx;
+}
+.show-selected
+{
+ 	border-bottom: 8rpx solid darkred;
+	padding-bottom: 15rpx; 
+}
+/*页面列表部分*/
+.show-info{
+	/*父级*/
+    width:100%;
+	height:130rpx;
+	text-align: centet;
+	border-bottom:1px solid #666;
+	white-space: nowrap;
+	display: inline-block;
+	position: relative;
+	font-family: 微软雅黑;
+	
+}
+.show-tm
+{
+   /*子级*/
+	width: 108rpx;
+	display: inline-block;
+	position: absolute;
+	top:33rpx;
+	left: 17rpx;
+    font-size: 19px;
+
+
+}
+.show-body
+{
+	/*子级*/
+	width: 118rpx;
+	display: inline-block;
+	
+	position: absolute;
+	left:208rpx;
+	top:14rpx;
+}
+.show-price
+{
+	/*子级*/
+	width: 150rpxrpx;
+	display: inline-block;
+	
+	position: absolute;
+	left:408rpx;
+	top:33rpx;
+	font-size:14px;
+	color:#ccc;
+}
+.show-pr
+{
+ color: #ccc;
+ font-size:12px;
+ text-decoration: line-through;
+}
+.show-sellPr
+{
+color:firebrick;
+}
+.show-line
+{
+ content: '';
+ width:80rpx;
+ height: 60rpx;
+ line-height: 60rpx;
+ padding: 8rpx;
+ border-radius: 5px;
+ text-align: center;
+ background: red;
+ color: #fff;	
+ font-size: 14px;
+ position: absolute;
+ top:30rpx;
+ left:628rpx;
+}
+.flex-box{
+	display: flex;
+}
+.flex-btn{
+	flex: 1;
+}
+.movies-list{
+    margin: 8rpx 0;
+    background-color: #fff;
+    width: 100%;
+}
+.list{
+	border-bottom: 1rpx solid #e5e5e5;
+	padding: 20rpx;
+}
+.list-img{
+	width: 160rpx;
+	height: 130rpx;
+	margin-right: 20rpx;
+	position: relative;
+}
+.list-img .img{
+	width: 160rpx;
+	height: 130rpx;
+}
+.list-title{
+	height: 52rpx;
+}
+.list-title text{
+	font-size: 15px;
+	line-height: 52rpx;
+	color: #000;
+}
+.list-brief{
+	font-size: 12px;
+	line-height: 48rpx;
+	color: #666;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 520rpx;
+}

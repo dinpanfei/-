@@ -1,0 +1,21 @@
+<!--pages/cinema/cinema.wxml-->
+<scroll-view class="container img-content" style="height: {{windowHeight}}px; width: {{windowWidth}}px; " scroll-y="true" bindscrolltoupper="pullDownRefresh" bindscrolltolower="pullUpLoad" lower-threshold="800">
+	<navigator class="list flex-box" wx:for="{{cinermas}}" url="../../details2/details2?title=navigate&id={{item.id}}&titles={{item.nm}}&addr={{item.addr}}&tel={{item.tel}}">
+		<view class="list-main flex-btn">
+		    <view class="list-title list-brief">
+			    <text>{{item.nm}}</text>	
+		    </view>
+		    <view class="list-size" wx:if="{{!item.preSale}}">
+					{{item.addr}}
+			</view>
+      <view class="list-brief">{{item.scm}}</view>
+	 <view class="list-brief">{{item.dir}}</view>
+			
+    <view class="list-sale">
+		<text wx:if="{{!item.sellPrice}}" class="pre-sale" style="background:#fea54c;border-radius:8rpx;font-size:12px;color:white;">更多优惠..</text>
+		<text wx:if="{{item.sellPrice}}" class="sales">
+		￥{{item.sellPrice}}<text style="font-size:10px;color:#8a869e">起</text></text>
+	</view>			
+		</view>
+	</navigator>
+</scroll-view>
